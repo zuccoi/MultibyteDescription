@@ -68,9 +68,11 @@
                 [mStr appendString:@",\n"];
             }
         }];
-        for (int i = 0; i < indent - 1; i++) {
-            [mStr appendString:@"    "];
-        }
+        if (indent > 0) {
+			for (int i = 0; i < indent - 1; i++) {
+				[mStr appendString:@"    "];
+			}
+		}
         [mStr appendString:@")"];
         return mStr;
     });
